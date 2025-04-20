@@ -1,0 +1,30 @@
+{%extends "wfdApp/base/base.html" %}
+
+
+{%block title%}
+<div class=title>
+	<h3>Items</h3>
+{% endblock %}
+</div>
+{% block content%}
+<div class="products">
+<table class="table">
+<tr>
+	<th>Name</th>
+	<th>Category</th>
+	<th>Description</th>
+	<th>Price</th>
+</tr>
+
+	{% for i in itemlist %}
+		<tr>
+			<td>{{i.itemName}}</td>
+			<td>{{i.category}}</td>
+			<td>{{i.desc}}</td>
+			<td>{{i.RetailPrice}}</td>
+
+		</tr>
+	{% endfor %}
+</div>
+
+{%endblock%}
