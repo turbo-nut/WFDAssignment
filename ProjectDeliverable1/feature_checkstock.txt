@@ -1,0 +1,10 @@
+Feature:
+Staff can check item stock (i.e customer query):
+
+Scenario:
+Staff has a customer query for checking an item:
+	Given I am a staff member
+	When I log in to the site
+	And I search for the item
+	Then I should see the stock for an item.
+

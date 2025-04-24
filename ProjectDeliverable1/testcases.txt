@@ -1,0 +1,24 @@
+test cases for a health inventory site
+not a shop = this should be a site that
+different staff can use to modify inventory
+or cross-reference stock
+they should also be allowed to request for admin
+actions such as deletions to their manager 
+which the manager can then give a onetime action
+to said staff
+
+
+managers/admins should be able to delete items
+from the inventory at will
+managers can give requests to employees to perform
+certain tasks, and give them a onettime  "admin action"
+
+the items should be organized by categories
+uhh so like a health store 
+holland + barrett seems like a good place to look
+
+category ideas:
+vitamins + supplements (minerals/CBD/growth etc)
+general health food (healthy snacks/nuts/fruits)
+sports food/supplements(protein bars/whey/pre-workout etc)
+self-care(hair/skin/hygiene)

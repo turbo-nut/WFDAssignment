@@ -1,0 +1,10 @@
+Feature:
+Shift Manager can update stock (shipment of items):
+
+Scenario:
+Shift Manager needs to edit stock for an item
+	Given I am a Shift Manager
+	When I log into the site
+	And I search for the item
+	And I change the number for the stock
+	Then I should see the new stock for the item.

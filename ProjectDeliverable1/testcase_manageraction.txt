@@ -1,0 +1,11 @@
+Feature:
+Manager can add and delete items
+
+Scanario:
+Manager needs to add an item
+	Given I am a manager
+	And I log into the site
+	And I open the Items menu
+	And I add an item
+	Then I should see the new item
+

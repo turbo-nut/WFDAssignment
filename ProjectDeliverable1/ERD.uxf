@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>250</x>
+      <y>130</y>
+      <w>170</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+StaffMember
+--
+PK intField staffID
+textField firstName
+textField lastName
+
+_umletcode=
+fg='black'
+bg='#222222'
+drawArc(5,5,26,8,0,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='bg'
+drawArc(5,5,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+fg='#929292'
+bg='#222222'
+drawRectangle(5,9,26,15) //Parameters (x, y, width, height);
+fg='black';
+drawLine(5,9,5,24) //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24) //Parameters (x1, y1, x2, y2) 
+bg='bg'
+drawArc(5,10,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='#222222'
+drawArc(5,20,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>0</y>
+      <w>190</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+ShiftManager
+--
+PK ForeignKey staffID
+textField firstName
+textField lastName
+--
+boolField hasManagerAction
+
+_umletcode=
+fg='black'
+bg='#222222'
+drawArc(5,5,26,8,0,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='bg'
+drawArc(5,5,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+fg='#929292'
+bg='#222222'
+drawRectangle(5,9,26,15) //Parameters (x, y, width, height);
+fg='black';
+drawLine(5,9,5,24) //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24) //Parameters (x1, y1, x2, y2) 
+bg='bg'
+drawArc(5,10,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='#222222'
+drawArc(5,20,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>160</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+generalManager
+--
+PK ForeignKey managerID
+textField firstName
+textField lastName
+--
+boolField isManager
+
+_umletcode=
+fg='black'
+bg='#222222'
+drawArc(5,5,26,8,0,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='bg'
+drawArc(5,5,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+fg='#929292'
+bg='#222222'
+drawRectangle(5,9,26,15) //Parameters (x, y, width, height);
+fg='black';
+drawLine(5,9,5,24) //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24) //Parameters (x1, y1, x2, y2) 
+bg='bg'
+drawArc(5,10,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='#222222'
+drawArc(5,20,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>300</y>
+      <w>160</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+Item
+--
+PK intField itemID
+intField stock
+textField category
+textField itemName
+textField description
+intField retailPrice
+
+
+_umletcode=
+fg='black'
+bg='#222222'
+drawArc(5,5,26,8,0,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='bg'
+drawArc(5,5,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+fg='#929292'
+bg='#222222'
+drawRectangle(5,9,26,15) //Parameters (x, y, width, height);
+fg='black';
+drawLine(5,9,5,24) //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24) //Parameters (x1, y1, x2, y2) 
+bg='bg'
+drawArc(5,10,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='#222222'
+drawArc(5,20,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>550</y>
+      <w>240</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+DeletionRequest
+--
+PK foreignKey requestID
+intField foreignKey itemID
+intField foreignKey requestDate
+intField foreignKey reqComments
+
+
+_umletcode=
+fg='black'
+bg='#222222'
+drawArc(5,5,26,8,0,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='bg'
+drawArc(5,5,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+fg='#929292'
+bg='#222222'
+drawRectangle(5,9,26,15) //Parameters (x, y, width, height);
+fg='black';
+drawLine(5,9,5,24) //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24) //Parameters (x1, y1, x2, y2) 
+bg='bg'
+drawArc(5,10,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='#222222'
+drawArc(5,20,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>320</y>
+      <w>220</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+Request
+--
+PK intField requestID
+intField foreignKey managerID
+intField foreignKey staffID
+foreignKey itemID
+dateField requestDate
+textField reqComments
+
+
+_umletcode=
+fg='black'
+bg='#222222'
+drawArc(5,5,26,8,0,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='bg'
+drawArc(5,5,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+fg='#929292'
+bg='#222222'
+drawRectangle(5,9,26,15) //Parameters (x, y, width, height);
+fg='black';
+drawLine(5,9,5,24) //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24) //Parameters (x1, y1, x2, y2) 
+bg='bg'
+drawArc(5,10,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='#222222'
+drawArc(5,20,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>530</y>
+      <w>240</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+newItemRequest
+--
+PK intField requestID
+intField foreignKey managerID
+intField foreignKey staffID
+foreignKey itemID
+foreignKey category
+dateField requestDate
+textField reqComments
+
+
+_umletcode=
+fg='black'
+bg='#222222'
+drawArc(5,5,26,8,0,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='bg'
+drawArc(5,5,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+fg='#929292'
+bg='#222222'
+drawRectangle(5,9,26,15) //Parameters (x, y, width, height);
+fg='black';
+drawLine(5,9,5,24) //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24) //Parameters (x1, y1, x2, y2) 
+bg='bg'
+drawArc(5,10,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='#222222'
+drawArc(5,20,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>550</y>
+      <w>240</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+EditRequest
+--
+PK foreignKey requestID
+intField foreignKey itemID
+intField foreignKey requestDate
+intField foreignKey reqComments
+intField foreignKey newStock
+
+_umletcode=
+fg='black'
+bg='#222222'
+drawArc(5,5,26,8,0,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='bg'
+drawArc(5,5,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+fg='#929292'
+bg='#222222'
+drawRectangle(5,9,26,15) //Parameters (x, y, width, height);
+fg='black';
+drawLine(5,9,5,24) //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24) //Parameters (x1, y1, x2, y2) 
+bg='bg'
+drawArc(5,10,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+bg='#222222'
+drawArc(5,20,26,8,180,180,true) //Parameters (x, y, width, height, start, extent, open)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>70</y>
+      <w>150</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;30.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>160</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;70.0;20.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>220</y>
+      <w>420</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-&gt;&gt;</panel_attributes>
+    <additional_attributes>400.0;180.0;10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>280</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>60</y>
+      <w>140</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;260.0;120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>130</y>
+      <w>690</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>670.0;170.0;670.0;10.0;70.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>460</y>
+      <w>240</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>220.0;10.0;220.0;50.0;10.0;50.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>460</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>460</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;190.0;50.0;190.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>380</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,16 @@
+Feature:
+Shift Manager can add or delete new item to inventory
+Shift Manager will need to request to change from a manager
+
+Scenario:
+Shift Manager needs to add a new item, Shift Manager needs to 
+make a request first.
+	Given I am a shift Manager
+	When I log into the site
+	And go into the request menu
+	And make a request with the item to be added
+	And wait for an approval
+	And get the approval
+	And make the change
+	Then I should be able to see the new item
+

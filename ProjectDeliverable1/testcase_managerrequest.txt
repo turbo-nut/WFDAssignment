@@ -1,0 +1,13 @@
+Feature:
+Manager can request a Shift Manager to make an administrator change:
+
+Scenario:
+Manager needs to request Shift Manager to add an item
+	Given i am a manager
+	And i log into the site
+	And I open the request menu
+	And I create a new request
+	And the Shift Manager completes the request
+	When I go to the Items menu
+	Then I should see the new item
+

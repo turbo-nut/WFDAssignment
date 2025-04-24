@@ -1,0 +1,12 @@
+Feature:
+Shift Manager can perform requests.
+
+Scenario:
+Shift Manager needs to perform a given request
+	Given that I am a Shift Manager
+	When I log into the site
+	And I click the Requests menu
+	And I check the request
+	And I perform the request
+	And i complete the request
+	Then the Manager can check and see the request is finished
