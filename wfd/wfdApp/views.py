@@ -106,7 +106,7 @@ def createItem(request):
     return render(request, 'wfdApp/createItem.html', context)
 
 
-def editItem(request, pk):
+def editItem(request, id):
     qSet = Item.objects.get(pk=id)
     form = itemEditForm(instance=qSet)
     if request.method == 'POST':
