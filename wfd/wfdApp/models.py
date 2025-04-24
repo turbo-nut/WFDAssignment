@@ -55,6 +55,3 @@ class Request(models.Model):
     reqType = models.CharField(
         choices=REQ_TYPES, max_length=20, default="Editing")
     reqComments = models.TextField(name="Comments")
-
-    def __str__(self):
-        return self.reqType

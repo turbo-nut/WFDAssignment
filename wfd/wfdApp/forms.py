@@ -31,3 +31,10 @@ class itemForm(forms.ModelForm):
     class Meta:
         model = Item
         fields = ["ItemName", "Category", "Stock", "RetailPrice"]
+
+
+class itemEditForm(forms.ModelForm):
+
+    class Meta:
+        model = Item
+        fields = ["ItemName", "Category", "Stock", "RetailPrice"]

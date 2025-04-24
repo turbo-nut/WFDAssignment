@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import Item, Request
-from .forms import userForm, itemForm, requestForm
+from .forms import userForm, itemForm, requestForm, itemEditForm
 # Create your views here.
 
 
@@ -106,8 +106,14 @@ def createItem(request):
     return render(request, 'wfdApp/createItem.html', context)
 
 
-def editItem(request, id):
-    return render(request, 'wfdApp/editItem.html', {})
+def editItem(request, pk):
+    qSet = Item.objects.get(pk=id)
+    form = itemEditForm(instance=qSet)
+    if request.method == 'POST':
+        form = itemEditForm(request.POST, instance=qSet)
+        if form.is_valid():
+            form.save()
+    return render(request, 'wfdApp/editItem.html', {'form': form})
 
 
 def requestDetails(request, id):
