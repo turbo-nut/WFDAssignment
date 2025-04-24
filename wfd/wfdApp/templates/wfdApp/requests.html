@@ -15,10 +15,13 @@
 				<a class="nav-link" href="/wfdApp/items">Items</a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="/wfdApp/items">Requests</a>
+				<a class="nav-link" href="/wfdApp/requests">Requests</a>
 			</li>
 			<li class="nav-item disabled">
 					<a class="nav-link" href="/wfdApp/createItem">Create New Item</a>
+			</li>
+			<li class="nav-item disabled">
+					<a class="nav-link" href="/wfdApp/createRequest">Create New Request</a>
 			</li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0" action="{%url 'item' %}" method="POST">
@@ -33,17 +36,19 @@
 <table class="table">
 <tr>
 	<th>Name</th>
-	<th>Category</th>
-	<th>Stock</th>
-	<th>Price</th>
+	<th>Request Deadline</th>
+	<th>Stock to Change</th>
+	<th>Type</th>
 </tr>
 
+	{% for Request in requests%}
 		<tr>
-			<td>{{selectedItem.itemName}}</td>
-			<td>{{selectedItem.Category}}</td>
-			<td>{{selectedItem.Stock}}</td>
-			<td>{{selectedItem.RetailPrice}}</td>
+			<td>{{Request.ItemName}}</td>
+			<td>{{Request.RequestDate}}</td>
+			<td>{{Request.NewStock}}</td>
+			<td>{{Request.reqType}}</td>
 
 		</tr>
+	{% endfor %}
 </div>
 </body>

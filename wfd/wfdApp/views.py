@@ -1,7 +1,8 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
 from django.urls import reverse
-from .models import Item
-from .forms import userForm, itemForm
+from django.contrib.auth.models import User
+from .models import Item, Request
+from .forms import userForm, itemForm, requestForm
 # Create your views here.
 
 
@@ -16,10 +17,26 @@ def login(request):
     # when the user logs in
     if request.method == 'POST':
         form = userForm(request.POST)
+        username = request.POST.get("username")
+        password = request.POST.get("password1")
         if form.is_valid():
             form.save()
+            if User is None:
+                user = User.objects.create(
+                    username=username, password=password)
+                user.save()
+                login(request, user)
+                HttpResponseRedirect(reverse("item"))
+            else:
+                login(request, user)
+                HttpResponseRedirect(reverse("item"))
 
     return render(request, 'wfdApp/login.html', context)
+
+
+def requests(request):
+    requests = Request.objects.all()
+    return render(request, 'wfdApp/requests.html', {'requests': requests})
 
 
 def items(request):
@@ -34,6 +51,32 @@ def searcheditem(request):
     else:
         results = Item.objects.none()
     return render(request, 'wfdApp/search.html', {'results': results})
+
+
+def createRequest(request):
+    form = requestForm()
+    context = {'form': form}
+
+    if request.method == 'POST':
+        newRequestDate = request.POST.get('RequestDate')
+        newStock = request.POST.get('Stock')
+        newreqType = request.POST.get('reqType')
+        newComments = request.POST.get('Comments')
+
+        req = Request()
+        req.itemName = request.POST.get('ItemName')
+        req.Stock = newStock
+        req.reqType = newreqType
+        req.RequestDate = newRequestDate
+        req.Comments = newComments
+
+        # save
+        req.save()
+
+        # return to request screen
+        return HttpResponseRedirect(reverse("requests"))
+
+    return render(request, 'wfdApp/createRequest.html', context)
 
 
 def createItem(request):
@@ -63,5 +106,15 @@ def createItem(request):
     return render(request, 'wfdApp/createItem.html', context)
 
 
+def editItem(request, id):
+    return render(request, 'wfdApp/editItem.html', {})
+
+
+def requestDetails(request, id):
+    selectedRequest = get_object_or_404(Request, pk=id)
+    return render(request, 'wfdApp/itemDetails.html', {'selectedRequest': selectedRequest})
+
+
 def itemDetails(request, id):
-    return render(request, 'wfdApp/itemDetails.html', {})
+    selectedItem = get_object_or_404(Item, pk=id)
+    return render(request, 'wfdApp/itemDetails.html', {'selectedItem': selectedItem})

@@ -3,7 +3,20 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
-from .models import Item
+from .models import Item, Request
+
+
+class dateInput(forms.DateInput):
+    input_type = 'date'
+
+
+class requestForm(forms.ModelForm):
+    class Meta:
+        model = Request
+        fields = ["ItemName", "RequestDate", "NewStock", "reqType", "Comments"]
+        widgets = {
+            'RequestDate': dateInput(),
+        }
 
 
 class userForm(UserCreationForm):

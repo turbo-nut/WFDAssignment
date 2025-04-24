@@ -1,3 +1,4 @@
+
 <head>
 	<title>Home</title>
 	{#bootstrap 5 CDN#}
@@ -20,6 +21,9 @@
 			<li class="nav-item disabled">
 					<a class="nav-link" href="/wfdApp/createItem">Create New Item</a>
 			</li>
+			<li class="nav-item disabled">
+					<a class="nav-link" href="/wfdApp/createRequest">Create New Request</a>
+			</li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0" action="{%url 'item' %}" method="POST">
 				{%csrf_token%}
@@ -39,10 +43,10 @@
 </tr>
 
 		<tr>
-			<td>{{selectedItem.itemName}}</td>
-			<td>{{selectedItem.Category}}</td>
-			<td>{{selectedItem.Stock}}</td>
-			<td>{{selectedItem.RetailPrice}}</td>
+			<td>{{selectedRequest.itemName}}</td>
+			<td>{{selectedRequest.Category}}</td>
+			<td>{{selectedRequest.Stock}}</td>
+			<td>{{selectedRequest.RetailPrice}}</td>
 
 		</tr>
 </div>
